@@ -11,6 +11,6 @@
         die("connection failed : " . $connection->connect_error);
     }
     else {
-        echo 'conectado!';
+        var_dump('conectado!');
     }
 ?>
