@@ -5,6 +5,7 @@
             $this->valornota = (@ $_REQUEST['valornota']);
             $this->disciplina = (@ $_REQUEST['disciplina']);
             $this->aluno = (@ $_REQUEST['aluno']);
+            echo "$this->aluno";
             $sql = "INSERT INTO nota (id_nota, valornota, disciplina, aluno) VALUES (1, '$this->valornota', '$this->disciplina', '$this->aluno')";
             
             if ($connection->query($sql) === TRUE){
