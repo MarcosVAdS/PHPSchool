@@ -13,7 +13,6 @@
                 return $connection->connect_error;
             }
             $connection -> close();
-
         }
 
         public function fetch_all(){
@@ -22,6 +21,21 @@
             $sql = "SELECT * FROM nota";
             $saida = $connection->query($sql);
             if($saida->num_rows > 0){
+                return $saida;
+            }else{
+                return $connection->connect_error;
+            }
+            $connection->close();
+        }
+
+        public function pesquisar(){
+            require_once "dbconnect.php";
+            $pesquisa = (@ $_REQUEST['pesquisa']);
+
+            $sql = "SELECT $pesquisa FROM nota";
+            $saida = $connection->query($sql);
+
+            if($saida->num_rows >0){
                 return $saida;
             }else{
                 return $connection->connect_error;

@@ -1,13 +1,12 @@
 <?php
     require("models/nota.php");
 
-    $nota = new nota();
-
-    $saida = $nota->fetch_all();
-    $notas = array();
-    while($row = $notas->fetch_assoc()) {
-        array_push($notas, $row);
+    $notas = new nota();
+    
+    $saida = $notas->fetch_all();
+    $json = array();
+    while($row = $saida->fetch_assoc()) {
+        array_push($json, $row);
     }
-    echo($sql->error);
-    echo ($notas);
+    echo json_encode($json);
 ?>
