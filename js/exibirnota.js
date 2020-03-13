@@ -15,4 +15,26 @@ $(document).ready(function () {
         }
       }
     });
+    var pesquisa = function pesquisar(){
+  
+    }
 });
+
+
+/*
+const pesquisa = function pesquisar(){
+  var itemPesquisa = document.getElementById('itemPesquisa')
+  //chamada ajax para enviar o que se quer do back
+  $.ajax({
+    url:'url para onde vai enviar os dados',
+    type:'post',
+    data = itemPesquisa,
+    sucess: function (data) {
+      if(data.error){
+        console.log('nao foi possivel faze a pesquisa')
+      }
+      console.log(data)
+    } 
+  })
+}
+*/
